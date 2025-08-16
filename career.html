@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLookUp Global Technologies</title>
+    <link rel="stylesheet" href="css/career.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/vlookup_logo.jfif" alt="Digital Agency Logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <!-- <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li> -->
+                    <li><a href="career.html" class="active">Careers</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="assets/careers_banner.jpg" alt="Careers image">
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Careers</h1>
+            </div>
+        </div>
+    </section>
+    <main class="careers-main">
+    <!-- Search Section -->
+    <section class="careers-search">
+        <div class="search-container">
+            <h2>Find Your Dream Job</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by job title, keywords, or location">
+                <button type="submit"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <!-- <div class="filter-options">
+                <select>
+                    <option value="">All Departments</option>
+                    <option value="development">Software Development</option>
+                    <option value="design">UI/UX Design</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="hr">Human Resources</option>
+                </select>
+                <select>
+                    <option value="">All Locations</option>
+                    <option value="san-francisco">San Francisco</option>
+                    <option value="new-york">New York</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </div> -->
+        </div>
+    </section>x
+
+    <!-- Job Listings Section -->
+    <section class="job-listings">
+        <div class="jobs-container">
+            <h2>Current Openings</h2>
+            <div id="noJobsMessage" class="no-jobs-message" style="display: none;">
+                Currently, there are no openings.
+            </div>
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>Senior Software Engineer</h3>
+                    <span class="job-type">Full-time</span>
+                    <span class="job-location">San Francisco / Remote</span>
+                </div>
+                <div class="job-details">
+                    <p>We're looking for an experienced software engineer to join our core product team...</p>
+                    <div class="job-skills">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+                <a href="#" class="apply-btn" data-job-title="Senior Software Engineer">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>UX Designer</h3>
+                    <span class="job-type">Full-time</span>
+                    <span class="job-location">New York</span>
+                </div>
+                <div class="job-details">
+                    <p>Join our design team to create beautiful, intuitive user experiences for our products...</p>
+                    <div class="job-skills">
+                        <span>Figma</span>
+                        <span>UI Design</span>
+                        <span>User Research</span>
+                    </div>
+                </div>
+                <a href="#" class="apply-btn" data-job-title="UX Designer">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <h3>Marketing Specialist</h3>
+                    <span class="job-type">Contract</span>
+                    <span class="job-location">Remote</span>
+                </div>
+                <div class="job-details">
+                    <p>Help us grow our brand and reach new customers through innovative marketing campaigns...</p>
+                    <div class="job-skills">
+                        <span>Digital Marketing</span>
+                        <span>SEO</span>
+                        <span>Social Media</span>
+                    </div>
+                </div>
+                <a href="#" class="apply-btn" data-job-title="Marketing Specialist">Apply Now</a>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Application Form Modal -->
+<div class="application-modal" id="applicationModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Apply for Position</h2>
+        <form class="application-form" id="jobApplicationForm">
+            <div class="form-group">
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="fullName">Full Name</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+                <label for="contactNumber">Contact Number</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email (Gmail)</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="jobTitle" name="jobTitle" required>
+                <label for="jobTitle">Job Title</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="currentCTC" name="currentCTC" required>
+                <label for="currentCTC">Current CTC</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="expectedCTC" name="expectedCTC" required>
+                <label for="expectedCTC">Expected CTC</label>
+            </div>
+            <div class="form-group">
+                <input type="number" id="experience" name="experience" required>
+                <label for="experience">Years of Experience</label>
+            </div>
+            <div class="form-group">
+                <input type="number" id="noticePeriod" name="noticePeriod" required>
+                <label for="noticePeriod">Notice Period (in days)</label>
+            </div>
+            <div class="form-group file-upload">
+                <!-- <input type="file" id="resume" name="resume" required>
+                <label for="resume">Upload Resume (PDF only)</label>
+                <span class="file-name" id="fileName">No file chosen</span> -->
+                <div class="file-upload-area" id="fileUploadArea">
+        <input type="file" id="resume" name="resume" required>
+        <label for="resume" class="file-upload-label">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Click to upload resume (PDF only)</span>
+        </label>
+        <span class="file-name" id="fileName">No file chosen</span>
+    </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+</div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Connect with us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/VlookUpGlobal/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/vlookup-global-technologies/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/vlookup_global_technologies/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Software Development</a></li>
+                        <li><a href="#">Staffing</a></li>
+
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Services</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> No 5, 1-36/c, Rd Number 4, above Manikanta Traders, near SriLatha Theatre, Jawahar Colony, Chanda Nagar, Hyderabad, Telangana 502032</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@vlookupglobal.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VLookUp Global Technologies. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
