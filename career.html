@@ -17,7 +17,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="assets/vlookup_logo.jfif" alt="Digital Agency Logo">
+                <img src="assets/Logo.png" alt="Digital Agency Logo">
             </div>
             <nav class="navbar">
                 <ul>
@@ -28,6 +28,7 @@
                     <li><a href="#">Blog</a></li> -->
                     <li><a href="career.html" class="active">Careers</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="admin/login.html">Admin Login</a></li>
                 </ul>
             </nav>
             <div class="hamburger">
@@ -76,7 +77,7 @@
                 </select>
             </div> -->
         </div>
-    </section>x
+    </section>
 
     <!-- Job Listings Section -->
     <section class="job-listings">
@@ -85,7 +86,7 @@
             <div id="noJobsMessage" class="no-jobs-message" style="display: none;">
                 Currently, there are no openings.
             </div>
-            <div class="job-card">
+            <!-- <div class="job-card">
                 <div class="job-header">
                     <h3>Senior Software Engineer</h3>
                     <span class="job-type">Full-time</span>
@@ -134,7 +135,7 @@
                     </div>
                 </div>
                 <a href="#" class="apply-btn" data-job-title="Marketing Specialist">Apply Now</a>
-            </div>
+            </div> -->
         </div>
     </section>
 </main>
@@ -143,54 +144,71 @@
     <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h2>Apply for Position</h2>
-        <form class="application-form" id="jobApplicationForm">
-            <div class="form-group">
-                <input type="text" id="fullName" name="fullName" required>
-                <label for="fullName">Full Name</label>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="contactNumber" name="contactNumber" required>
-                <label for="contactNumber">Contact Number</label>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" required>
-                <label for="email">Email (Gmail)</label>
-            </div>
-            <div class="form-group">
-                <input type="text" id="jobTitle" name="jobTitle" required>
-                <label for="jobTitle">Job Title</label>
-            </div>
-            <div class="form-group">
-                <input type="text" id="currentCTC" name="currentCTC" required>
-                <label for="currentCTC">Current CTC</label>
-            </div>
-            <div class="form-group">
-                <input type="text" id="expectedCTC" name="expectedCTC" required>
-                <label for="expectedCTC">Expected CTC</label>
-            </div>
-            <div class="form-group">
-                <input type="number" id="experience" name="experience" required>
-                <label for="experience">Years of Experience</label>
-            </div>
-            <div class="form-group">
-                <input type="number" id="noticePeriod" name="noticePeriod" required>
-                <label for="noticePeriod">Notice Period (in days)</label>
-            </div>
-            <div class="form-group file-upload">
-                <!-- <input type="file" id="resume" name="resume" required>
-                <label for="resume">Upload Resume (PDF only)</label>
-                <span class="file-name" id="fileName">No file chosen</span> -->
-                <div class="file-upload-area" id="fileUploadArea">
-        <input type="file" id="resume" name="resume" required>
-        <label for="resume" class="file-upload-label">
-            <i class="fas fa-cloud-upload-alt"></i>
-            <span>Click to upload resume (PDF only)</span>
-        </label>
-        <span class="file-name" id="fileName">No file chosen</span>
+        <form class="application-form" id="jobApplicationForm" method="post" action="https://script.google.com/macros/s/AKfycbxRfiHOLXBoZP8yVqyql-NCV132oisJ6n4qhghUeUE-2fITTqXCIK9iaiNZZ9X1MH-J/exec">
+    <div class="form-group">
+        <label for="fullName">Full Name*</label>
+        <input type="text" id="fullName" name="fullName" required aria-required="true">
     </div>
-            </div>
-            <button type="submit" class="submit-btn">Submit Application</button>
-        </form>
+    
+    <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+        <small class="hint">We'll contact you at this address</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="contactNumber">Phone Number*</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required aria-required="true">
+    </div>
+    
+    <div class="form-group">
+        <label for="jobTitle">Position Applied For*</label>
+        <input type="text" id="jobTitle" name="jobTitle" readonly required aria-required="true">
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group half-width">
+            <label for="currentCTC">Current CTC (₹)*</label>
+            <input type="text" id="currentCTC" name="currentCTC" required aria-required="true">
+        </div>
+        <div class="form-group half-width">
+            <label for="expectedCTC">Expected CTC (₹)*</label>
+            <input type="text" id="expectedCTC" name="expectedCTC" required aria-required="true">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="experience">Years of Experience*</label>
+        <input type="number" id="experience" name="experience" min="0" step="0.5" required aria-required="true">
+    </div>
+    
+    <div class="form-group">
+        <label for="noticePeriod">Notice Period*</label>
+        <select id="noticePeriod" name="noticePeriod" required aria-required="true">
+            <option value="">Select...</option>
+            <option value="0">Immediate</option>
+            <option value="7">1 Week</option>
+            <option value="14">2 Weeks</option>
+            <option value="30">1 Month</option>
+            <option value="60">2 Months</option>
+            <option value="90">3 Months</option>
+        </select>
+    </div>
+    
+    <div class="form-group file-upload">
+        <label>Upload Resume (PDF, max 5MB)*</label>
+        <div class="file-upload-area" id="fileUploadArea">
+            <input type="file" id="resume" name="resume" accept=".pdf" required aria-required="true">
+            <label for="resume" class="file-upload-label">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Click to upload your resume</span>
+            </label>
+            <span class="file-name" id="fileName">No file chosen</span>
+        </div>
+    </div>
+    <button type="submit" id="submitBtn" class="submit-btn">Submit Application</button>
+    <div id="formMessages" class="messages"></div>
+</form>
     </div>
 </div>
     <!-- Footer Section -->
@@ -232,7 +250,7 @@
                     <h3>Contact Us</h3>
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> No 5, 1-36/c, Rd Number 4, above Manikanta Traders, near SriLatha Theatre, Jawahar Colony, Chanda Nagar, Hyderabad, Telangana 502032</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-phone"></i> +91 83281 18821</li>
                         <li><i class="fas fa-envelope"></i> info@vlookupglobal.com</li>
                     </ul>
                 </div>
@@ -240,13 +258,15 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 VLookUp Global Technologies. All Rights Reserved.</p>
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <!-- <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a> -->
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/application_form.js"></script>
 </body>
 </html>

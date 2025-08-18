@@ -81,57 +81,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // CAREER PAGE APPLICATION FORM
 // Application Form Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('applicationModal');
-    const applyButtons = document.querySelectorAll('.apply-btn');
-    const closeModal = document.querySelector('.close-modal');
-    const fileInput = document.getElementById('resume');
-    const fileName = document.getElementById('fileName');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const modal = document.getElementById('applicationModal');
+//     const applyButtons = document.querySelectorAll('.apply-btn');
+//     const closeModal = document.querySelector('.close-modal');
+//     const fileInput = document.getElementById('resume');
+//     const fileName = document.getElementById('fileName');
     
-    // Show modal when Apply Now is clicked
-    applyButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        });
-    });
+//     // Show modal when Apply Now is clicked
+//     applyButtons.forEach(button => {
+//         button.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             modal.style.display = 'block';
+//             document.body.style.overflow = 'hidden'; // Prevent scrolling
+//         });
+//     });
     
-    // Close modal when X is clicked
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
+//     // Close modal when X is clicked
+//     closeModal.addEventListener('click', function() {
+//         modal.style.display = 'none';
+//         document.body.style.overflow = 'auto';
+//     });
     
-    // Close modal when clicking outside
-    window.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
+//     // Close modal when clicking outside
+//     window.addEventListener('click', function(e) {
+//         if (e.target === modal) {
+//             modal.style.display = 'none';
+//             document.body.style.overflow = 'auto';
+//         }
+//     });
     
-    // Show selected file name
-    fileInput.addEventListener('change', function() {
-        if (this.files.length > 0) {
-            fileName.textContent = this.files[0].name;
-        } else {
-            fileName.textContent = 'No file chosen';
-        }
-    });
+//     // Show selected file name
+//     fileInput.addEventListener('change', function() {
+//         if (this.files.length > 0) {
+//             fileName.textContent = this.files[0].name;
+//         } else {
+//             fileName.textContent = 'No file chosen';
+//         }
+//     });
     
-    // Form submission
-    const applicationForm = document.getElementById('jobApplicationForm');
-    applicationForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Here you would typically send the form data to your server
-        alert('Application submitted successfully!');
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        this.reset();
-        fileName.textContent = 'No file chosen';
-    });
-});
+//     // Form submission
+//     const applicationForm = document.getElementById('jobApplicationForm');
+//     applicationForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
+//         // Here you would typically send the form data to your server
+//         alert('Application submitted successfully!');
+//         modal.style.display = 'none';
+//         document.body.style.overflow = 'auto';
+//         this.reset();
+//         fileName.textContent = 'No file chosen';
+//     });
+// });
 
 
 

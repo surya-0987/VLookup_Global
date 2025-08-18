@@ -1,0 +1,178 @@
+/* Navbar Styles */
+.header {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo .sitename {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+}
+
+.navmenu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu a:focus {
+  color: blue;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navmenu .bi-list {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navmenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1976d2;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu ul.show {
+    display: flex;
+  }
+
+  .navmenu .bi-list {
+    display: block;
+  }
+}
+
+/* Main Content Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 90px; /* To account for fixed navbar */
+}
+
+/* Rest of your existing styles... */
+h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #125ca1;
+}
+
+#jobList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+#jobList li {
+  background: white;
+  border-left: 5px solid #1976d2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#jobList li b {
+  color: #222;
+  font-size: 16px;
+}
+
+#jobList button {
+  background-color: #e53935;
+  border: none;
+  width: 100%;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#jobList button:hover {
+  background-color: #f72b2b;
+}
+
+/* Responsive job cards */
+@media (min-width: 600px) {
+  #jobList {
+    grid-template-columns: 1fr 1fr;
+  }
+}

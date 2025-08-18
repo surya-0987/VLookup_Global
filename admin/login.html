@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Page</title>
+    <link rel="stylesheet" href="/admin/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h1>Admin Login</h1>
+            
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email Id">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="pass" placeholder="Enter your password">
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                
+                <div class="options">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="mobileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Enter Admin Mobile Number</h3>
+            <p>Note: The mobile number should match the registered number (*******821).</p>
+            <input type="text" id="adminMobileInput" placeholder="Enter mobile number" />
+            <button class="modal-submit-btn">Submit</button>
+            <p id="mobileError" class="error-message">Incorrect mobile number.</p>
+        </div>
+        <!-- <div id="otpVerificationStep" style="display:none;">
+            <h3>Enter OTP</h3>
+            <p>We've sent a 6-digit OTP to your registered mobile number ending with 095.</p>
+            <input type="text" id="otpInput" placeholder="Enter OTP" maxlength="6" />
+            <button class="verify-otp-btn">Verify OTP</button>
+            <p id="otpError" class="error-message">Invalid OTP. Please try again.</p>
+            <p class="resend-otp">Didn't receive OTP? <a href="#" id="resendOtpLink">Resend OTP</a></p>
+        </div> -->
+    </div>
+    <script src="/admin/login.js"></script>
+</body>
+</html>
