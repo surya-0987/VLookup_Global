@@ -680,7 +680,7 @@ ul {
 .careers-search {
     /* background-color: #2c3e50; */
     color: #2c3e50;
-    padding: 3rem 0;
+    padding: 0rem 0;
     text-align: center;
 }
 
@@ -1127,8 +1127,10 @@ ul {
 .page-banner {
     background: linear-gradient(135deg, #ffc472 0%, #82b4fb 50%, #ff6971 100%);
     color: rgb(40, 19, 19);
-    height: 60vh;
+    height: 50vh;
     /* padding: 50vh 0; */
+    min-height: 400px;
+    display: flex;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1144,7 +1146,9 @@ ul {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     animation: fadeInUp 0.8s ease;
 }
-
+.page-banner .banner-content p{
+    color: rgb(72, 67, 67);
+}
 /* Optional: Add some decorative elements */
 .page-banner::before {
     content: '';
