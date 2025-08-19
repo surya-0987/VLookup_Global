@@ -224,7 +224,7 @@ ul {
     align-items: center;
     background: 
         linear-gradient(rgba(0, 0, 0, 5), rgba(251, 123, 44, 0.5)),
-        url('assets/banner_1.jpg') no-repeat center center;
+        url('') no-repeat center center;
     background-size: cover;
     color: white;
 }
