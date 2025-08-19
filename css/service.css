@@ -529,9 +529,9 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0px 0;
+    padding: 20px 0;
     background-color: var(--bg-color);
-    z-index: 1001;
+    z-index: 1000;
 }
 
 
